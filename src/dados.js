@@ -7,7 +7,7 @@ const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/test_14A8wQ07U6Sb2YQ27cdIA02
 const PRECO_DESTAQUE = "R$ 50";
 const DESTAQUES = [ /* ex.: "entumix", "joinville-cacambas" */ ];
 /* WhatsApp que recebe os pedidos de cadastro de empresas novas, só números com DDD (ex.: "45999990000"). */
-const CONTATO_WHATSAPP = "";
+const CONTATO_WHATSAPP = "45999524094";
 
 const CIDADES = {
   "cascavel":          { nome:"Cascavel",          uf:"PR", regiao:"Oeste do Paraná" },
