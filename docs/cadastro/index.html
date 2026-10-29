@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cadastre sua empresa de caçambas grátis | Caçamba Perto</title>
+<meta name="description" content="Não achou sua empresa no Caçamba Perto? Cadastre grátis sua locadora de caçambas, mini entulho ou terraplanagem.">
+<link rel="canonical" href="https://cacambaperto.com.br/cadastro/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caçamba Perto">
+<meta property="og:title" content="Cadastre sua empresa de caçambas grátis | Caçamba Perto">
+<meta property="og:description" content="Não achou sua empresa no Caçamba Perto? Cadastre grátis sua locadora de caçambas, mini entulho ou terraplanagem.">
+<meta property="og:url" content="https://cacambaperto.com.br/cadastro/">
+<meta name="theme-color" content="#1C2025">
+<link rel="icon" href="../assets/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body data-root="../">
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="../"><b>Caçamba Perto</b><span>cacambaperto.com.br</span></a>
+    <nav aria-label="Principal">
+      <a href="../#cidades">Cidades</a>
+      <a href="../categoria/cacamba/">Caçambas</a>
+      <a href="../categoria/mini/">Mini entulho</a>
+      <a href="../cadastro/">Cadastrar empresa</a>
+      <a class="cta" href="../anunciar/">Anunciar</a>
+    </nav>
+  </div>
+  <div class="hazard" aria-hidden="true"></div>
+</header>
+<main>
+
+<div class="wrap">
+  <p class="crumbs"><a href="../">Início</a> / Cadastrar empresa</p>
+  <div class="plan">
+    <div>
+      <p class="eyebrow">Cadastro gratuito</p>
+      <h1 class="page-h1">Não achou sua empresa aqui?</h1>
+      <p class="lead">Preencha os dados e entre em contato. O cadastro básico é grátis e sua empresa aparece na página da sua cidade em até 2 dias úteis.</p>
+      <p class="note" style="margin-top:16px">Também serve para corrigir dados de uma empresa que já está no site, como telefone ou endereço.</p>
+      <p style="margin-top:20px"><a href="../anunciar/">Quer aparecer no topo? Conheça o plano Destaque →</a></p>
+    </div>
+    <form class="form" id="cad" novalidate>
+      <label for="cad-nome">Nome da empresa<input id="cad-nome" required autocomplete="organization"></label>
+      <label for="cad-cidade">Cidade<select id="cad-cidade" required><option value="">Selecione…</option><option>Cascavel/PR</option><option>Toledo/PR</option><option>Foz do Iguaçu/PR</option><option>Francisco Beltrão/PR</option><option>Pato Branco/PR</option><option>Guarapuava/PR</option><option>Ponta Grossa/PR</option><option>Maringá/PR</option><option>Londrina/PR</option><option>Chapecó/SC</option><option>Joinville/SC</option><option value="outra">Outra cidade</option></select></label>
+      <label for="cad-outra" id="lbl-outra" hidden>Qual cidade?<input id="cad-outra"></label>
+      <label for="cad-cat">Serviço<select id="cad-cat" required><option>Caçamba estacionária</option><option>Mini entulho e tambores</option><option>Terraplanagem</option><option>Reciclagem e gestão de resíduos</option></select></label>
+      <label for="cad-tel">Telefone ou WhatsApp<input id="cad-tel" type="tel" required autocomplete="tel" placeholder="(45) 99999-0000"></label>
+      <label for="cad-end">Endereço e bairro<input id="cad-end" autocomplete="street-address"></label>
+      <label for="cad-resp">Seu nome<input id="cad-resp" autocomplete="name"></label>
+      <p class="note" id="cad-erro" role="alert" hidden></p>
+      <div class="warn"><strong>Contato ainda não configurado.</strong> Coloque o número de WhatsApp em src/dados.js e gere o site de novo.</div>
+      <button class="btn primary" type="submit" disabled>Enviar pelo WhatsApp</button>
+      <p class="note">O botão abre o WhatsApp com a mensagem pronta. É só tocar em enviar.</p>
+    </form>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>Caçamba Perto · diretório de locação de caçambas e serviços de entulho no Paraná e em Santa Catarina</span>
+    <span>Dados públicos de empresas locais. É dono de uma empresa listada? <a href="../cadastro/">Atualize os dados</a> ou <a href="../anunciar/">destaque seu anúncio</a>.</span>
+  </div>
+</footer>
+<div class="toast" id="toast" hidden></div>
+<script src="../assets/config.js"></script>
+<script src="../assets/lib.js"></script>
+
+<script src="../assets/app.js"></script>
+</body>
+</html>
