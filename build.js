@@ -7,6 +7,9 @@ const D = require("./src/dados.js");
 const { esc, isCel, digits, plural, foto, card } = require("./src/lib.js");
 
 const SITE = "https://cacambaperto.com.br/";
+/* Mude para true quando o DNS do cacambaperto.com.br estiver apontando para o GitHub.
+   Enquanto for false, o site funciona em alvarodalpupo.github.io/cacambaperto/ */
+const USAR_DOMINIO = false;
 const NOME = "Caçamba Perto";
 const OUT = path.join(__dirname, "docs");
 const { CIDADES, CATEGORIAS, COORDS, EMPRESAS } = D;
@@ -343,7 +346,7 @@ function paginaCadastro() {
 /* ---------- 404 (links absolutos, pois pode abrir em qualquer endereço) ---------- */
 function pagina404() {
   return pagina({
-    caminho: null, raiz: "/",
+    caminho: null, raiz: USAR_DOMINIO ? "/" : "/cacambaperto/",
     titulo: `Página não encontrada | ${NOME}`,
     descricao: "Página não encontrada.",
     corpo: root => `<div class="wrap hero"><p class="eyebrow">Erro 404</p><h1>Essa página não existe</h1><p>O endereço pode ter mudado. Escolha sua cidade abaixo.</p></div>
@@ -387,7 +390,7 @@ ${paginas.map(p => `  <url><loc>${SITE}${p}</loc><lastmod>${hoje}</lastmod></url
 </urlset>
 `);
 escrever("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
-escrever("CNAME", "cacambaperto.com.br\n");
+if (USAR_DOMINIO) escrever("CNAME", "cacambaperto.com.br\n");
 escrever(".nojekyll", "");
 
 console.log(`Site gerado em docs/: ${paginas.length} páginas, ${EMPRESAS.length} empresas, ${Object.keys(CIDADES).length} cidades.`);
